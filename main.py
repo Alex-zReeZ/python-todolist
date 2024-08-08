@@ -7,9 +7,11 @@ def show_menu():
         print("1. Add task")
         print("2. Delete task (enter the name of the todo)")
         print("3. Archive task (enter the name of the todo)")
-        print("4. Exit")
+        print("4. see archived tasks")
+        print("5. Exit")
         print("------------------")
         print("Current tasks:", tasks)
+        print("Archived tasks:", archived_tasks)
 
         input_value = input("Choose an option: ").strip()
 
@@ -20,6 +22,8 @@ def show_menu():
         elif input_value == "3":
             archive_task()
         elif input_value == "4":
+            see_archived_tasks()
+        elif input_value == "5":
             print("Exiting...")
             break
         else:
@@ -41,10 +45,14 @@ def delete_task():
 
 
 def archive_task():
-    pass
+    task_to_archive = input("Enter the task to archive: ")
+    if task_to_archive in tasks:
+        tasks.remove(task_to_archive)
+        archived_tasks.append(task_to_archive)
+        print("Task")
 
 
-def see_tasks():
+def see_archived_tasks():
     pass
 
 
