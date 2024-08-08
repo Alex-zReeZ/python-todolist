@@ -9,6 +9,8 @@ def show_menu():
     print("3. Archive task")
     print("4. See tasks")
     print("5. Exit")
+    print("------------------")
+    print(task)
 
 
 def add_task():
