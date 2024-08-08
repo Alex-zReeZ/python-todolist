@@ -61,7 +61,9 @@ def archive_task():
 
 
 def see_archived_tasks():
-    print("Archived tasks:", archived_tasks)
+    print("Archived tasks:")
+    for index, task in enumerate(archived_tasks, start=1):
+        print(f"{index}. {task}")
 
 
 if __name__ == "__main__":
