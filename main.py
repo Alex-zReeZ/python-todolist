@@ -42,12 +42,12 @@ def add_task():
 
 
 def delete_task():
-    task_to_delete = input("Enter the task to delete: ")
-    if task_to_delete in tasks:
-        tasks.remove(task_to_delete)
-        print("Task deleted successfully")
+    task_index = int(input("Enter the number of the task you want to delete : ")) - 1
+    if 0 <= task_index < len(tasks):
+        removed_task = tasks.pop(task_index)
+        print(f"Tâche '{removed_task}' supprimée avec succès")
     else:
-        print("Task not found")
+        print("invalide number")
 
 
 def archive_task():
