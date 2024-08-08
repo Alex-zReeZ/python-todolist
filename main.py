@@ -51,11 +51,13 @@ def delete_task():
 
 
 def archive_task():
-    task_to_archive = input("Enter the task to archive: ")
-    if task_to_archive in tasks:
-        tasks.remove(task_to_archive)
+    tasks_index = int(input("Entrez l'index de la tâche à archiver: ")) - 1
+    if 0 <= tasks_index < len(tasks):
+        task_to_archive = tasks.pop(tasks_index)
         archived_tasks.append(task_to_archive)
-        print("Task")
+        print(f"Tâche '{task_to_archive}' archivée avec succès")
+    else:
+        print("Index invalide")
 
 
 def see_archived_tasks():
