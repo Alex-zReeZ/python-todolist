@@ -28,9 +28,10 @@ def show_menu():
         else:
             print("Invalid option, please try again.")
 
-
 def add_task():
-    pass
+    new_task = input("Enter your new task: ")
+    tasks.append(new_task)
+    print("Task added successfully")
 
 
 def delete_task():
