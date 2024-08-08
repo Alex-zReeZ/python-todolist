@@ -5,10 +5,9 @@ def show_menu():
     while True:
         print("\nMenu:")
         print("1. Add task")
-        print("2. Delete task")
-        print("3. Archive task")
-        print("4. See tasks")
-        print("5. Exit")
+        print("2. Delete task (enter the name of the todo)")
+        print("3. Archive task (enter the name of the todo)")
+        print("4. Exit")
         print("------------------")
         print("Current tasks:", tasks)
 
@@ -21,8 +20,6 @@ def show_menu():
         elif input_value == "3":
             archive_task()
         elif input_value == "4":
-            see_tasks()
-        elif input_value == "5":
             print("Exiting...")
             break
         else:
@@ -35,7 +32,12 @@ def add_task():
 
 
 def delete_task():
-    pass
+    task_to_delete = input("Enter the task to delete: ")
+    if task_to_delete in tasks:
+        tasks.remove(task_to_delete)
+        print("Task deleted successfully")
+    else:
+        print("Task not found")
 
 
 def archive_task():
