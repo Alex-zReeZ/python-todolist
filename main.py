@@ -53,7 +53,7 @@ def archive_task():
 
 
 def see_archived_tasks():
-    pass
+    print("Archived tasks:", archived_tasks)
 
 
 if __name__ == "__main__":
