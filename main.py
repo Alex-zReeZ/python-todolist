@@ -5,13 +5,12 @@ def show_menu():
     while True:
         print("\nMenu:")
         print("1. Add task")
-        print("2. Delete task (enter the name of the todo)")
+        print("2. Delete task")
         print("3. Archive task (enter the name of the todo)")
         print("4. see archived tasks")
         print("5. Exit")
         print("------------------")
-        print("Current tasks:", tasks)
-        print("Archived tasks:", archived_tasks)
+        print(show_tasks())
 
         input_value = input("Choose an option: ").strip()
 
@@ -28,6 +27,13 @@ def show_menu():
             break
         else:
             print("Invalid option, please try again.")
+
+
+def show_tasks():
+    print("Task list:")
+    for index, task in enumerate(tasks, start=1):
+        print(f"{index}. {task}")
+
 
 def add_task():
     new_task = input("Enter your new task: ")
