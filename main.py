@@ -6,7 +6,7 @@ def show_menu():
         print("\nMenu:")
         print("1. Add task")
         print("2. Delete task")
-        print("3. Archive task (enter the name of the todo)")
+        print("3. Archive task")
         print("4. see archived tasks")
         print("5. Exit")
         print("------------------")
